@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolListRemoverUI", "ToolListRemoverUI\ToolListRemoverUI.csproj", "{B4F05B9F-3DCF-4230-9104-6B165BFB799A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolListRemoverLibrary", "ToolListRemoverLibrary\ToolListRemoverLibrary.csproj", "{4EFEA06D-5EFD-4C38-9037-0D2D8D04D9C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4F05B9F-3DCF-4230-9104-6B165BFB799A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4F05B9F-3DCF-4230-9104-6B165BFB799A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4F05B9F-3DCF-4230-9104-6B165BFB799A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4F05B9F-3DCF-4230-9104-6B165BFB799A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EFEA06D-5EFD-4C38-9037-0D2D8D04D9C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EFEA06D-5EFD-4C38-9037-0D2D8D04D9C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EFEA06D-5EFD-4C38-9037-0D2D8D04D9C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EFEA06D-5EFD-4C38-9037-0D2D8D04D9C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42090DB4-225C-44B8-B10F-376E27A37A37}
+	EndGlobalSection
+EndGlobal
