@@ -51,6 +51,7 @@ namespace ToolListRemoverUI
                     TDMConnector.DeleteToolLists(verifiedListsIds);
                 }
                 MessageBox.Show("Listy narzędziowe zostały pomyślnie usunięte", "Sukces!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
             MessageBox.Show("Brak list narzędziowych do usunięcia", "Brak Danych!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }

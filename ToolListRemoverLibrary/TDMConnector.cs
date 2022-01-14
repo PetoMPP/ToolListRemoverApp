@@ -19,16 +19,19 @@ namespace ToolListRemoverLibrary
                 // Get List of NC programs with file locations
                 List<string> filePaths = GetNcFilesPaths(listId);
                 // Delete files ignoring exception if file is not found
-                foreach (string filePath in filePaths)
+                if (filePaths != null)
                 {
-                    try
+                    foreach (string filePath in filePaths)
                     {
-                        File.Delete(filePath);
-                    }
-                    catch (FileNotFoundException)
-                    {
-                        ;
-                    }
+                        try
+                        {
+                            File.Delete(filePath);
+                        }
+                        catch (FileNotFoundException)
+                        {
+                            ;
+                        }
+                    } 
                 }
                 // Delete db entries
                 DeleteNcProgramsDbData(listId);
@@ -62,6 +65,11 @@ namespace ToolListRemoverLibrary
             using IDbConnection cnxn = GetTDMConnection();
             // Get Machine
             string machineId = GetMachineID(cnxn, listId);
+            // Skip looking for files if machine is not specified
+            if (machineId == null)
+            {
+                return null;
+            }
             // Get file data
             List<NcProgramFileModel> ncPrograms = GetNcProgramsData(cnxn, listId);
             foreach (NcProgramFileModel ncProgram in ncPrograms)
