@@ -1,13 +1,10 @@
 ﻿using Dapper;
 using Microsoft.Data.SqlClient;
-using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ToolListRemoverLibrary
 {
@@ -47,7 +44,7 @@ namespace ToolListRemoverLibrary
                 string id = cnxn.ExecuteScalar<string>($"SELECT LISTID FROM TDM_LIST WHERE LISTID = '{listId}'", commandType: CommandType.Text);
                 if (id != null)
                 {
-                    verifiedListsIds.Add(id); 
+                    verifiedListsIds.Add(id);
                 }
             }
             return verifiedListsIds;
@@ -104,7 +101,7 @@ SELECT FILEID AS FileId, EXTENSION AS Extension, STATEID AS StateId, VERSION AS 
 FROM NCM_PRODDOCB
 WHERE LISTID = '{listId}'").ToList();
 
-        private static string GetMachineID(IDbConnection cnxn, string listId) => 
+        private static string GetMachineID(IDbConnection cnxn, string listId) =>
             cnxn.Query<string>($"SELECT MACHINEID FROM TDM_LIST WHERE LISTID = '{listId}'", commandType: CommandType.Text).First();
 
         public static void DeleteToolLists(List<string> listsIds)
