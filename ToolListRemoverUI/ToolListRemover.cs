@@ -6,9 +6,9 @@ using ToolListRemoverLibrary;
 
 namespace ToolListRemoverUI
 {
-    public partial class Dashboard : Form
+    public partial class ToolListRemover : Form
     {
-        public Dashboard()
+        public ToolListRemover()
         {
             InitializeComponent();
         }

@@ -1,7 +1,7 @@
 ﻿
 namespace ToolListRemoverUI
 {
-    partial class Dashboard
+    partial class ToolListRemover
     {
         /// <summary>
         /// Required designer variable.
